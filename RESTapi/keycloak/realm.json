@@ -1,0 +1,29 @@
+{
+    "realm": "WeightTrackerAPI",
+    "enabled": true,
+    "registrationAllowed": true,
+    "users": [{
+        "username": "Daftpy",
+        "email": "daftpy@gamil.com",
+        "firstName": "John",
+        "lastName": "Doe",
+        "enabled": true,
+        "credentials": [{
+            "type": "password",
+            "value": "changeme"
+        }]
+    }],
+    "clients": [{
+        "clientId": "WeightTrackerMobileClient",
+        "enabled": true,
+        "redirectUris": [
+        "com.zybooks.myapplication:/oauth2redirect"
+        ],
+        "directAccessGrantsEnabled": false,
+        "publicClient": true,
+        "frontchannelLogout": true,
+        "attributes": {
+            "post.logout.redirect.uris": "com.zybooks.myapplication:/logout"
+        }
+    }]
+}

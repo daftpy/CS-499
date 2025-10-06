@@ -1,0 +1,62 @@
+services:
+  mysql:
+    image: mysql:8.0
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    env_file: "./mysql/.env.dev"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks: [app_network]
+    ports:
+      - "3306:3306"
+  
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    command:
+      - start-dev
+      - --import-realm # Import realm data
+      - --proxy-headers=xforwarded # Flag for reverse proxy
+    env_file: "./keycloak/.env.dev"
+    volumes:
+      - ./keycloak/realm.json:/opt/keycloak/data/import/realm.json
+    networks: [app_network]
+    expose:
+      - "8080"
+    depends_on:
+      - mysql
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.dev
+    env_file: ["./api/.env.dev", "./mysql/.env.dev"]
+    ports:
+      - "3000:3000"
+    networks: [app_network]
+    volumes:
+      # Bind the source code and node modules for building
+      - ./api:/usr/src/app
+      - /usr/src/app/node_modules
+
+  caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    networks: [app_network]
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Bind the dev Caddyfile to the container Caddyfile
+      - ./caddy/Caddyfile.dev:/etc/caddy/Caddyfile:ro
+      # Bind the data to get access to the Caddy certificate
+      # Necessary for HTTPs in Android virtual device
+      - ./caddy/caddy_data:/data
+
+volumes:
+  mysql_data:
+
+networks:
+  app_network:
+    driver: bridge

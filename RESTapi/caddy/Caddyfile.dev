@@ -1,0 +1,29 @@
+localhost {
+    reverse_proxy api:3000
+}
+
+api.10-0-2-2.sslip.io {
+    reverse_proxy api:3000
+    tls internal
+}
+
+
+# Proxy to Keycloak
+keycloak.localhost {
+    reverse_proxy keycloak:8080
+    log {
+        output stdout
+        level debug
+    }
+    tls internal  # CA for localhost
+}
+
+# Proxy to Keycloak
+keycloak.10-0-2-2.sslip.io  {
+    reverse_proxy keycloak:8080
+    log {
+        output stdout
+        level debug
+    }
+    tls internal  # CA for localhost
+}
