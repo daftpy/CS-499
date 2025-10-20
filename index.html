@@ -1,11 +1,383 @@
-<html>
-  <head>
-    <title>CS-499 Portfolio</title>
-  </head>
-  <body>
-    <h1>Alexander Flood – CS-499 ePortfolio</h1>
-    <p>Welcome to my professional portfolio for CS-499: Computer Science Capstone at Southern New Hampshire University.</p>
-    <p>This site will serve as the home for my final project, including enhanced artifacts in software engineering, algorithms and data structures, and databases, as well as my professional self-assessment.</p>
-    <p>Content will be added and expanded as I progress through the course.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alexander Flood | CS-499 ePortfolio</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Segoe UI, Roboto, Arial, sans-serif;
+    background: #0a0f14;
+    color: #e5e7eb;
+    line-height: 1.6;
+  }
+
+  /* Header: flat, no gradients or rounded corners */
+  header {
+    padding: 48px 20px 16px;
+    text-align: center;
+    background: #0f172a;
+    border-bottom: 2px solid #1f2937;
+  }
+
+  h1 {
+    margin: 0 0 8px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  .subtitle {
+    color: #9ca3af;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  /* Nav styling */
+  nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 20px 16px;
+    border-bottom: 2px solid #1f2937;
+    background: #0c131a;
+  }
+
+  nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    padding: 10px 14px;
+    border: 1px solid #1f2937;
+    background: #0e1620;
+    font-size: 14px;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  nav a:hover {
+    border-color: #22c55e;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  /* Layout */
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 20px 64px;
+  }
+
+  section {
+    margin: 28px 0;
+  }
+
+  /* Cards with a flat, square, subtle border */
+  .card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    padding: 18px 20px;
+    margin-top: 12px;
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin: 0 0 10px;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .col-12 {
+    grid-column: span 12;
+  }
+
+  .col-6 {
+    grid-column: span 12;
+  }
+
+  @media (min-width: 820px) {
+    .col-6 {
+      grid-column: span 6;
+    }
+  }
+
+  ul {
+    margin: 8px 0 0 22px;
+  }
+
+  /* Inline links with subtle underline */
+  a.link {
+    color: #34d399;
+    text-decoration: none;
+    border-bottom: 1px dashed #34d399;
+    width: fit-content;
+  }
+
+  a.link:hover {
+    text-decoration: none;
+    border-bottom-color: #22c55e;
+    color: #22c55e;
+  }
+
+  footer {
+    border-top: 2px solid #1f2937;
+    color: #9ca3af;
+    padding: 22px 20px 40px;
+    text-align: center;
+    background: #0f172a;
+  }
+
+  .small {
+    color: #9ca3af;
+    font-size: 0.95rem;
+  }
+
+  .kbd {
+    background: #0b1117;
+    border: 1px solid #1f2937;
+    padding: 1px 6px;
+    font-family: ui-monospace, "Liberation Mono", monospace;
+    font-size: 0.9em;
+    color: #cbd5e1;
+  }
+
+  .anchor {
+    color: #22c55e;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  .links {
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Alexander Flood | CS-499 ePortfolio</h1>
+  </header>
+
+  <nav>
+    <a href="#self-assessment">Professional Self-Assessment</a>
+    <a href="#code-review">Code Review</a>
+    <a href="#enhancements">Artifact Enhancements</a>
+    <a href="#repo">Repository</a>
+  </nav>
+
+  <main>
+    <section id="self-assessment">
+      <span class="anchor">#Introduction</span>
+      <h2>Professional Self-Assessment</h2>
+      <div class="card">
+        <p>
+          This portfolio represents my progression from building small course projects to implementing
+          secure, scalable, and maintainable systems that reflect industry practices. Throughout the program,
+          I strengthened core competencies across software design, algorithms & data structures, databases,
+          security, and communication.
+        </p>
+
+        <h4>Collaboration & Communication</h4> 
+        <p>
+          Throughout each enhancement, I worked with the 
+          same care and structure used in professional projects. I documented design decisions in detailed 
+          Microsoft Word documents, wrote clear inline comments, and prepared my code for review and feedback. 
+          I tailored explanations for different audiences by writing several README files, technical notes 
+          for developers, and concise narratives and reflection journals for non-technical readers.
+        </p>
+        <p>I also focused on process transparency and maintainability. I used meaningful commit messages, organized 
+          repository structure and issue notes, and included setup instructions so others could reproduce results 
+          quickly. I incorporated instructor feedback into revisions, clarified UI where needed, 
+          and kept documentation synchronized with my changes to make sure the rationale behind my choices
+          remained were easy to understand.
+        </p>
+
+        <h4>Software Engineering</h4>
+        <p>
+          I used engineering best practices throughout my work, 
+          using Docker Compose to containerize services and maintain a clear separation between the application, database, 
+          and authentication layers. This modular architecture simplified deployment, made local testing more predictable, 
+          and mirrored production-like environments you find on professional teams. I also adopted an API-first mindset, designing endpoints and data 
+          models before implementing user interfaces to ensure consistency across systems. On the Android side, I 
+          reinforced clean architecture principles by separating UI, networking, and persistence logic into distinct layers. 
+        </p>
+        <p>
+          To enhance reliability, I implemented health checks, error handling, and liveness endpoints that improved 
+          observability across services. These changes not only made the application more fault-tolerant but also helped 
+          streamline debugging and performance monitoring. The result is a project that demonstrates modern full-stack 
+          practices while remaining easy to extend and maintain.
+        </p>
+
+        <h4>Data Structures & Algorithms.</h4>
+        <p>
+          I designed efficient data-driven features that analyze and 
+          interpret time-series weight data. The enhancements include a seven-entry rolling average to smooth out 
+          short-term fluctuations and an ordinary least squares regression to calculate a trend line and projected 
+          goal-achievement date. Each algorithm runs in predictable O(<span class="kbd">n</span>) time and was implemented 
+          with clear preconditions and edge-case handling to prevent misleading outputs. 
+        </p>
+        <p>
+          In addition to algorithmic accuracy, I focused on readability and maintainability. I documented mathematical 
+          logic with concise inline comments and structured methods so future developers could easily extend the analytics 
+          layer with additional computations. These improvements reflect my ability to integrate algorithmic reasoning into 
+          practical, user-facing applications.
+        </p>
+
+        <h4>Databases</h4>
+        <p>
+          I implemented an offline-first data model that synchronizes a 
+          local SQLite cache with a cloud-hosted MySQL database via RESTful API. The app retrieves cached data instantly 
+          for responsiveness, then performs background synchronization to maintain accuracy and consistency. This design 
+          balances performance and reliability while allowing users to continue tracking data even without connectivity. 
+        </p>
+        <p>
+          I also focused on schema alignment between local and remote databases to avoid conflicts during synchronization, 
+          ensuring timestamp and ID integrity across both systems. These improvements demonstrate practical skills in 
+          database normalization, API integration, and data reliability, creating a seamless bridge between client storage 
+          and cloud persistence.
+        </p>
+        
+        <h4>Security Mindset</h4>
+        <p>
+          I used standards-based authentication (Keycloak + OpenID Connect),
+          validated JWTs server-side, and encrypted tokens at rest on Android using the Android Keystore.
+          This aligns with Zero Trust principles by verifying every request and scoping data per user.
+          I also implemented HTTPS for all network communication and enforced secure token lifecycles to prevent replay attacks.
+          Together, these measures ensure data confidentiality and integrity while maintaining a seamless user experience.
+        </p>
+
+        <p>
+          Overall, these artifacts demonstrate my readiness to contribute to full-stack or mobile teams
+          focused on cloud-based deployments, security, and user-friendly software. Through this work, I met
+          the key CS-499 outcomes by designing secure, scalable systems (Outcome 4), applying algorithmic
+          principles to real-world problems (Outcome 3), and maintaining a security-first approach in
+          architecture and implementation (Outcome 5). Together, these experiences reflect technical
+          depth and professional growth across the multiple areas of computer science.
+        </p>
+
+      </div>
+    </section>
+
+  <section id="code-review">
+    <span class="anchor">#Video</span>
+    <h2>Code Review</h2>
+    <div class="card">
+      <p>
+        I began this project by conducting an informal code review to assess the current architecture, identify risks,
+        and prioritize my enhancements. The review focused on structure and readability, API design, security concerns
+        (authentication and token handling), and database schema alignment. This gave me a concrete roadmap for the 
+        three enhancements I made and ensured each one mapped to a course outcome.
+      </p>
+      <p>
+        The screencast below walks through the existing functionality, targeted improvements, and the plan for each
+        enhancement with clear alignment to the course outcomes.
+      </p>
+
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border:1px solid #1f2937; background:#0e1620;">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/5o98nUN_kzY"
+          title="Code Review Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="position:absolute; top:0; left:0; width:100%; height:100%;"
+        ></iframe>
+      </div>
+      <p>
+        <a class="link" href="REPLACE_WITH_YOUTUBE_OR_VIDEO_URL" target="_blank" rel="noopener">Watch the Code Review Video</a>
+      </p>
+    </div>
+  </section>
+
+
+    <section id="enhancements">
+      <span class="anchor">#Artifacts</span>
+      <h2>Artifact Enhancements</h2>
+
+      <div class="grid">
+        <div class="col-12 card">
+          <h3>Enhancement 1: Software Design & Engineering</h3>
+          <p>
+            <em>Weight Tracker API & Android Client (Containerized, Authenticated Architecture)</em><br/>
+            Refactored the original local-only app into a service-based system: Dockerized REST API (Node/Express),
+            MySQL persistence, Keycloak OIDC authentication, and an Android client using a typed networking layer.
+            Emphasis on modularity, reliability, and secure request handling.
+          </p>
+          <ul>
+            <li>Docker Compose stack: <span class="kbd">mysql</span>, <span class="kbd">keycloak</span>, <span class="kbd">api</span>, <span class="kbd">caddy</span></li>
+            <li>Health checks, pagination, partial updates, and robust error mapping</li>
+            <li>Clean separation of concerns in the Android client</li>
+          </ul>
+          <div class="links">
+            <a class="link" href="https://github.com/daftpy/CS-499/tree/main/RESTapi">View source</a>
+            <a class="link" href="https://github.com/daftpy/CS-499/blob/main/narratives/artifact-1-narrative.docx">Read narrative</a>
+          </div>
+        </div>
+
+        <div class="col-12 card">
+          <h3>Enhancement 2: Data Structures & Algorithms</h3>
+          <p>
+            <em>Rolling Average & Linear Trend Analytics (O(n))</em><br/>
+            Added a 7-entry rolling average to smooth noise and an ordinary least squares regression to estimate
+            slope (lb/day) and project a goal date. Handles edge cases explicitly (e.g., insufficient data,
+            non-decreasing trends) and integrates directly into the Grid view without extra network calls.
+          </p>
+          <ul>
+            <li>Time-series analytics with predictable O(<span class="kbd">n</span>) complexity</li>
+            <li>Explicit preconditions/limits to avoid misleading projections</li>
+            <li>Clear user messaging and concise inline documentation</li>
+          </ul>
+          <div class="links">
+            <a class="link" href="https://github.com/daftpy/CS-499/blob/main/WeightTracker/app/src/main/java/com/zybooks/myapplication/Analytics.java">View source</a>
+            <a class="link" href="https://github.com/daftpy/CS-499/blob/main/narratives/artifact-2-narrative.docx">Read narrative</a>
+          </div>
+        </div>
+
+        <div class="col-12 card">
+          <h3>Enhancement 3: Databases</h3>
+          <p>
+            <em>Offline-First SQLite Cache + Cloud MySQL Sync</em><br/>
+            Implemented a cache layer via <code>DatabaseHelper</code>. The app renders cached weights immediately,
+            then fetches fresh data from the API, replacing the cache on success. Goals are cached as a singleton.
+            This provides fast first paint, graceful offline behavior, and eventual consistency.
+          </p>
+          <ul>
+            <li>Cache tables mirror server shape (ids, values, ISO timestamps)</li>
+            <li>Simple, maintainable cache API: <code>replaceWeights()</code>, <code>getAllWeights()</code>, <code>setGoal()</code>, <code>getGoal()</code></li>
+            <li>Clean integration in <code>GridActivity</code> with cache-then-sync flow</li>
+          </ul>
+          <div class="links">
+            <a class="link" href="https://github.com/daftpy/CS-499/blob/main/WeightTracker/app/src/main/java/com/zybooks/myapplication/DatabaseHelper.java">View source</a>
+            <a class="link" href="https://github.com/daftpy/CS-499/blob/main/narratives/artifact-3-narrative.docx">Read narrative</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="repo">
+      <h2>Repository</h2>
+      <div class="card">
+        <p>
+          GitHub Repository (all artifacts & narratives):<br/>
+          <a class="link" href="https://github.com/daftpy/CS-499">https://github.com/daftpy/CS-499</a>
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
 </html>
